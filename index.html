@@ -150,6 +150,11 @@
                 Test
                 <div class="category-count">1</div>
             </a>
+        
+            <a class="category-link" href="/categories/blog/">
+                blog
+                <div class="category-count">4</div>
+            </a>
         </div>
     </div>
   </div>
@@ -160,7 +165,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">Tags</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/FedAvg/" rel="tag">FedAvg</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/FedProx/" rel="tag">FedProx</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/nacos/" rel="tag">nacos</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" rel="tag">联邦学习</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AF%81%E6%98%8E/" rel="tag">证明</a></li></ul>
     </div>
   </div>
 
@@ -171,6 +176,360 @@
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-联邦学习FedProx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedProx/">联邦学习FedProx</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-04-16T05:44:56.000Z" itemprop="datePublished">2024-04-16</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/blog/">blog</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            946 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FedProx/" rel="tag">FedProx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" rel="tag">联邦学习</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Proceedings of Machine learning and systems, 2020
+
+FedAvg的问题系统异构：FedAvg遇到规定时间内计算不完E次更新的设备会直接丢弃，不能让不同设备执行不同次数的更新。统计异构：FedAvg在非IID数据上存在经验差异。
+
+FedProx：致力于解决系统异构性和统计异构性联邦学习的目的
+FedProx思想背景：FedAvg限制每个设备每一轮训练epoch数为E问题：每个设备的能力不同，这样做会导致部分设备可能不能完成训练，丢弃掉队者（FedAvg）或是直接合并掉队者未迭代完成的模型（FedProx且近端项为0）都会增加统计异质性。解决：每个设备、每个轮次的最佳epoch数不一定要相同这一段的意思是，对于第t轮传过来的模型wt，客户端有一个度量γkt只要模型经过一定训练使模型当前的梯度小于γ~[0-1]倍的原始wt模型的梯度，就表明现在的模型已经是一个γ-不精确解了，就可以接受了，这个γ即接受程度应当是每个用户每一轮都自适应的，但是本文的实验代码只是取了一个随机数，代码中没有γ，让不同客户端完成不同epoch数的训练来模拟这个...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedProx/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="post-联邦学习FedAvg收敛证明" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedAvg%E6%94%B6%E6%95%9B%E8%AF%81%E6%98%8E/">联邦学习FedAvg收敛证明</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-04-16T05:43:18.000Z" itemprop="datePublished">2024-04-16</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/blog/">blog</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            505 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FedAvg/" rel="tag">FedAvg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" rel="tag">联邦学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%81%E6%98%8E/" rel="tag">证明</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              [ICLR-2020](ON THE CONVERGENCE OF FEDAVG ON NON-IID DATA)
+
+本文谷歌2000+引用，几乎每个论文里提到了“联邦学习算法收敛”的都会引用这个，它证明了FedAvg在Non-IID数据上的收敛性，同时为后面的许多论文证明其方法的收敛性提供了模板。与之前的文章不同，这篇文章并没有作出以下两个联邦设置中不切实际的假设：（1）数据是IID的；（2）每个客户端总是活跃的。它证明了FedAvg的收敛速度是O（1&#x2F;T），T是每个设备的SGDs总数。
+
+N是用户设备总数K是参与每轮通信的最大设备数量T是每个设备的SGD总数E是设备在每轮通信的局部迭代次数T&#x2F;E是通信轮次
+
+本地损失定义：本地优化过程：全局优化目标：全体参与聚合：部分参与聚合：
+
+假设1：如果是L-Lipschitz的，就有了一个二次函数的上界假设2：如果是 μ-strongly convex的，就有了一个二次函数的下界假设3：每个设备的随机梯度的方差是有界的，即单采样和全采样的梯度的L2范数的平方的期望有界假设4：单采样的梯度的L2范数的平方的期望有界
+...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedAvg%E6%94%B6%E6%95%9B%E8%AF%81%E6%98%8E/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="post-联邦学习FedAvg" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedAvg/">联邦学习FedAvg</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-04-16T05:41:40.000Z" itemprop="datePublished">2024-04-16</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/blog/">blog</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            533 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FedAvg/" rel="tag">FedAvg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" rel="tag">联邦学习</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              
+Artificial intelligence and statistics, 2017
+
+
+摘要背景：现代移动设备可以访问适合学习模型的大量数据，这反过来又可以极大地改善设备上的用户体验。问题：然而，这些丰富的数据通常对隐私敏感、数量庞大。方案：提出将训练数据分布在移动设备上，并通过聚合本地计算的更新来学习共享模型，并称之为“联邦学习”。
+
+介绍贡献1）将移动设备去中心化数据的训练问题确定为一个重要的研究方向；2）选择可以应用于此设置的简单且实用的算法；3）对所提出的方法进行广泛的实证评估。
+联邦学习的特点1）对来自移动设备的真实世界数据进行训练比对数据中心中通常可用的代理数据进行训练具有明显的优势。2）这些数据对隐私敏感或数据量较大（与模型的大小相比），因此最好不要纯粹出于模型训练的目的（服务于集中收集原则）将其记录到数据中心。3）对于监督任务，数据上的标签可以从用户交互中自然推断出来。
+隐私联邦学习传输的信息是改进特定模型所需的最小更新。
+联邦优化1）非独立同分布（Non-IID）2）不平衡——用户参与度不同3）大规模分布4）有限的通信
+非联邦环境下的训练：一共n个数据，...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedAvg/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="post-nacos集群搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/04/16/nacos%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/">nacos集群搭建(from heima)</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-04-16T05:30:47.000Z" itemprop="datePublished">2024-04-16</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/blog/">blog</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            11k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nacos/" rel="tag">nacos</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Nacos集群搭建1.集群结构图官方给出的Nacos集群图：
+
+其中包含3个nacos节点，然后一个负载均衡器代理3个Nacos。这里负载均衡器可以使用nginx。
+我们计划的集群结构：
+
+三个nacos节点的地址：
+
+
+
+节点
+ip
+port
+
+
+
+nacos1
+192.168.150.1
+8845
+
+
+nacos2
+192.168.150.1
+8846
+
+
+nacos3
+192.168.150.1
+8847
+
+
+2.搭建集群搭建集群的基本步骤：
+
+搭建数据库，初始化数据库表结构
+下载nacos安装包
+配置nacos
+启动nacos集群
+nginx反向代理
+
+2.1.初始化数据库Nacos默认数据存储在内嵌数据库Derby中，不属于生产可用的数据库。
+官方推荐的最佳实践是使用带有主从的高可用数据库集群，主从模式的高可用数据库可以参考传智教育的后续高手课程。
+这里我们以单点的数据库为例来讲解。
+首先新建一个数据库，命名为nacos，而后导入下面的SQL：
+123456789101112131415161718192021222324252627282930313233343536...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/04/16/nacos%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
    
 
 
