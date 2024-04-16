@@ -14,24 +14,32 @@
   
 
   
-  <title>我的第一篇博客 | 个人博客</title>
+  <title>联邦学习FedProx | 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="博客站点介绍作者动辄疯 内容发布一些学习笔记">
+  <meta name="description" content="Proceedings of Machine learning and systems, 2020  FedAvg的问题系统异构：FedAvg遇到规定时间内计算不完E次更新的设备会直接丢弃，不能让不同设备执行不同次数的更新。统计异构：FedAvg在非IID数据上存在经验差异。  FedProx：致力于解决系统异构性和统计异构性联邦学习的目的 FedProx思想背景：FedAvg限制每个设备每一轮训">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http://example.com/2024/04/13/hello-world/index.html">
+<meta property="og:title" content="联邦学习FedProx">
+<meta property="og:url" content="http://example.com/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedProx/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="博客站点介绍作者动辄疯 内容发布一些学习笔记">
+<meta property="og:description" content="Proceedings of Machine learning and systems, 2020  FedAvg的问题系统异构：FedAvg遇到规定时间内计算不完E次更新的设备会直接丢弃，不能让不同设备执行不同次数的更新。统计异构：FedAvg在非IID数据上存在经验差异。  FedProx：致力于解决系统异构性和统计异构性联邦学习的目的 FedProx思想背景：FedAvg限制每个设备每一轮训">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-04-13T02:03:38.609Z">
-<meta property="article:modified_time" content="2024-04-13T03:32:08.739Z">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709877267874-eadb5608-684f-4828-a90a-e0426367d172.png#averageHue=%23f6f6f6&clientId=ua7d50442-5322-4&from=paste&height=79&id=u15423451&originHeight=87&originWidth=616&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=9561&status=done&style=none&taskId=u0d1d3b75-3358-443f-b716-464d6abfb25&title=&width=559.9999878623271">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709879698956-bac5b565-8fe0-4d64-8260-af309f898b17.png#averageHue=%23eae3d2&clientId=ua7d50442-5322-4&from=paste&height=149&id=uf460b2ca&originHeight=164&originWidth=519&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=35409&status=done&style=none&taskId=u04592a66-a73d-4d53-be55-a81662ab572&title=&width=471.8181715917984">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709880977773-20cc24a8-5e11-42da-af4a-e9482adcdb9b.png#averageHue=%23fefefd&clientId=u451b7ace-b6bb-4&from=paste&height=133&id=u45624d83&originHeight=146&originWidth=976&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=39376&status=done&style=none&taskId=uf5a346f0-566e-481c-a248-c5de799942e&title=&width=887.2727080416092">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709879500340-7844c016-1300-4afb-b7b4-a5cf772f621c.png#averageHue=%23ebe3ce&clientId=ua7d50442-5322-4&from=paste&height=308&id=u328ecd4d&originHeight=339&originWidth=538&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=59571&status=done&style=none&taskId=uf5de8132-c839-4c8a-bc6b-8725d9a77a7&title=&width=489.09089849014936">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709879527957-1ed6fb15-bc5c-43ca-982d-872e4b5d3d53.png#averageHue=%23fdf7f7&clientId=ua7d50442-5322-4&from=paste&height=115&id=u7f681b6d&originHeight=126&originWidth=914&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=44399&status=done&style=none&taskId=u30c8c8ae-c9d8-4445-bb3f-df0e55b3d69&title=&width=830.9090728996217">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709880402391-d6cab244-d726-455e-853d-b6b3a97b7b97.png#averageHue=%23f4efe7&clientId=u01789aaa-6cee-4&from=paste&height=676&id=u5b360509&originHeight=744&originWidth=1158&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=331386&status=done&style=none&taskId=u5fd305f4-a6e9-4df4-9fde-b19bab3351d&title=&width=1052.727249910024">
+<meta property="article:published_time" content="2024-04-16T05:44:56.000Z">
+<meta property="article:modified_time" content="2024-04-16T05:46:51.576Z">
 <meta property="article:author" content="Kouzen Sai">
-<meta property="article:tag" content="测试">
+<meta property="article:tag" content="联邦学习">
+<meta property="article:tag" content="FedProx">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709877267874-eadb5608-684f-4828-a90a-e0426367d172.png#averageHue=%23f6f6f6&clientId=ua7d50442-5322-4&from=paste&height=79&id=u15423451&originHeight=87&originWidth=616&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=9561&status=done&style=none&taskId=u0d1d3b75-3358-443f-b716-464d6abfb25&title=&width=559.9999878623271">
   
     <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
   
@@ -181,7 +189,7 @@
        
 
 
-<article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-联邦学习FedProx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
     
    
@@ -194,7 +202,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        我的第一篇博客
+        联邦学习FedProx
       </h1>
     
   
@@ -202,28 +210,37 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2024-04-13T02:03:38.609Z" itemprop="datePublished">2024-04-13</time>
+  <time class="dt-published" datetime="2024-04-16T05:44:56.000Z" itemprop="datePublished">2024-04-16</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Test/">Test</a>
+  <a class="meta-cate-link" href="/categories/blog/">blog</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            21 words 
+            946 words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FedProx/" rel="tag">FedProx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" rel="tag">联邦学习</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h2 id="博客站点介绍"><a href="#博客站点介绍" class="headerlink" title="博客站点介绍"></a>博客站点介绍</h2><h3 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h3><p>动辄疯</p>
-<h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><p>发布一些学习笔记</p>
+          <p><a target="_blank" rel="noopener" href="https://proceedings.mlsys.org/paper_files/paper/2020/file/1f5fe83998a09396ebe6477d9475ba0c-Paper.pdf">Proceedings of Machine learning and systems, 2020</a></p>
+<hr>
+<h2 id="FedAvg的问题"><a href="#FedAvg的问题" class="headerlink" title="FedAvg的问题"></a>FedAvg的问题</h2><p><strong>系统异构：</strong><br>FedAvg遇到规定时间内计算不完E次更新的设备会直接丢弃，不能让不同设备执行不同次数的更新。<br><strong>统计异构：</strong><br>FedAvg在非IID数据上存在经验差异。</p>
+<hr>
+<h2 id="FedProx：致力于解决系统异构性和统计异构性"><a href="#FedProx：致力于解决系统异构性和统计异构性" class="headerlink" title="FedProx：致力于解决系统异构性和统计异构性"></a>FedProx：致力于解决系统异构性和统计异构性</h2><h3 id="联邦学习的目的"><a href="#联邦学习的目的" class="headerlink" title="联邦学习的目的"></a>联邦学习的目的</h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709877267874-eadb5608-684f-4828-a90a-e0426367d172.png#averageHue=%23f6f6f6&clientId=ua7d50442-5322-4&from=paste&height=79&id=u15423451&originHeight=87&originWidth=616&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=9561&status=done&style=none&taskId=u0d1d3b75-3358-443f-b716-464d6abfb25&title=&width=559.9999878623271" alt="image.png"></p>
+<h3 id="FedProx思想"><a href="#FedProx思想" class="headerlink" title="FedProx思想"></a>FedProx思想</h3><p><strong>背景：</strong>FedAvg限制每个设备每一轮训练epoch数为E<br><strong>问题：</strong>每个设备的能力不同，这样做会导致部分设备可能不能完成训练，丢弃掉队者（FedAvg）或是直接合并掉队者未迭代完成的模型（FedProx且近端项为0）都会增加统计异质性。<br><strong>解决：</strong>每个设备、每个轮次的最佳epoch数不一定要相同<br><img src="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709879698956-bac5b565-8fe0-4d64-8260-af309f898b17.png#averageHue=%23eae3d2&clientId=ua7d50442-5322-4&from=paste&height=149&id=uf460b2ca&originHeight=164&originWidth=519&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=35409&status=done&style=none&taskId=u04592a66-a73d-4d53-be55-a81662ab572&title=&width=471.8181715917984" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709880977773-20cc24a8-5e11-42da-af4a-e9482adcdb9b.png#averageHue=%23fefefd&clientId=u451b7ace-b6bb-4&from=paste&height=133&id=u45624d83&originHeight=146&originWidth=976&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=39376&status=done&style=none&taskId=uf5a346f0-566e-481c-a248-c5de799942e&title=&width=887.2727080416092" alt="image.png"><br>这一段的意思是，对于第t轮传过来的模型wt，客户端有一个度量γkt只要模型经过一定训练使模型当前的梯度小于γ~[0-1]倍的原始wt模型的梯度，就表明现在的模型已经是一个γ-不精确解了，就可以接受了，这个γ即接受程度应当是每个用户每一轮都自适应的，但是本文的实验代码只是取了一个随机数，代码中没有γ，让不同客户端完成不同epoch数的训练来模拟这个效果，这可能是一个可以延申的地方。<br><img src="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709879500340-7844c016-1300-4afb-b7b4-a5cf772f621c.png#averageHue=%23ebe3ce&clientId=ua7d50442-5322-4&from=paste&height=308&id=u328ecd4d&originHeight=339&originWidth=538&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=59571&status=done&style=none&taskId=uf5de8132-c839-4c8a-bc6b-8725d9a77a7&title=&width=489.09089849014936" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709879527957-1ed6fb15-bc5c-43ca-982d-872e4b5d3d53.png#averageHue=%23fdf7f7&clientId=ua7d50442-5322-4&from=paste&height=115&id=u7f681b6d&originHeight=126&originWidth=914&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=44399&status=done&style=none&taskId=u30c8c8ae-c9d8-4445-bb3f-df0e55b3d69&title=&width=830.9090728996217" alt="image.png"><br>增加一个近端项的目的是，避免模型距离初始模型过远，减少Non-IID统计异质性的影响，避免局部模型陷入局部最优化而导致全局模型不能实现最优化。</p>
+<hr>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p><img src="https://cdn.nlark.com/yuque/0/2024/png/40575125/1709880402391-d6cab244-d726-455e-853d-b6b3a97b7b97.png#averageHue=%23f4efe7&clientId=u01789aaa-6cee-4&from=paste&height=676&id=u5b360509&originHeight=744&originWidth=1158&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=331386&status=done&style=none&taskId=u5fd305f4-a6e9-4df4-9fde-b19bab3351d&title=&width=1052.727249910024" alt="image.png"></p>
+<hr>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><h3 id="1-创造具体的算法使γ可以真正随轮次和用户的不同自动取值。"><a href="#1-创造具体的算法使γ可以真正随轮次和用户的不同自动取值。" class="headerlink" title="1.创造具体的算法使γ可以真正随轮次和用户的不同自动取值。"></a>1.创造具体的算法使γ可以真正随轮次和用户的不同自动取值。</h3><p>如何确定γ？有什么标准？<br>全部的客户端默认设置一个γ，在每轮中根据参与度，设备硬件计算能力等指标确定一个指标，把所有的客户端按照这个指标排列，并按照正态分布（随便想的，可以等差数列、正态分布都试试）设置γ值。</p>
+<h3 id="2-沿用文章的实现，不去真正地设置γ，而是通过划分客户端，使其epoch数不同。"><a href="#2-沿用文章的实现，不去真正地设置γ，而是通过划分客户端，使其epoch数不同。" class="headerlink" title="2.沿用文章的实现，不去真正地设置γ，而是通过划分客户端，使其epoch数不同。"></a>2.沿用文章的实现，不去真正地设置γ，而是通过划分客户端，使其epoch数不同。</h3><p>如何“创新”使自己的方法与他的原方法不同呢？原文仅仅是用了掉队率这一指标，把客户端分为活跃的和非活跃的。<br>再加一个客户端数据量作为指标，如果有一个数据量很大的客户端，但由于数据量和设备硬件问题导致掉队，那么应该是不合适的。还有，文章使用的随机epoch数，改为通过掉队率（参与度）、硬件、数据量等指标来确定。这两种想法本质上一样，就是“采用γ来判断训练结束”还是“直接设置epoch数”的区别。</p>
 
         
       </div>
@@ -236,22 +253,22 @@
   
     
 <nav id="article-nav">
-  <a class="article-nav-btn left "
-    
-      href="/2024/04/16/nacos%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"
-      title="nacos集群搭建(from heima)"
+  <a class="article-nav-btn left  disabled "
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
-      
-        nacos集群搭建(from heima)
         
     </p>
   </a>
-  <a class="article-nav-btn right  disabled "
+  <a class="article-nav-btn right "
+    
+      href="/2024/04/16/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0FedAvg%E6%94%B6%E6%95%9B%E8%AF%81%E6%98%8E/"
+      title="联邦学习FedAvg收敛证明"
      >
 
     <p class="title-text">
+      
+        联邦学习FedAvg收敛证明
         
     </p>
     <i class="fa-solid fa-angle-right"></i>
