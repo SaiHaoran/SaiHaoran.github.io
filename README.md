@@ -2,5 +2,6 @@
 https://saihaoran.github.io/
 网站实例：
 http://117.72.46.11
-alexchrs.top
+
+http://alexchrs.top
 (用pc浏览器打开)
